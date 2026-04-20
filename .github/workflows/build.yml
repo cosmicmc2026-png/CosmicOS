@@ -1,0 +1,45 @@
+name: Build CosmicOS ISO
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:   # bottone manuale su GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout sorgenti
+        uses: actions/checkout@v4
+
+      - name: Installa dipendenze
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y xorriso ovmf git make
+
+      - name: Installa Rust nightly
+        uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rust-src, llvm-tools
+
+      - name: Cache Cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            kernel/target
+            ~/.cargo/registry
+          key: cosmic-${{ hashFiles('kernel/Cargo.toml') }}
+
+      - name: Scarica Limine
+        run: make limine-fetch
+
+      - name: Compila kernel + crea ISO
+        run: make iso
+
+      - name: Carica ISO come artefatto
+        uses: actions/upload-artifact@v4
+        with:
+          name: CosmicOS-v0.0.1-Developer-Beta
+          path: CosmicOS.iso
+          retention-days: 30
