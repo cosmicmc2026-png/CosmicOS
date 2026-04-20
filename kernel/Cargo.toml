@@ -8,7 +8,7 @@ name = "cosmic-kernel"
 path = "src/main.rs"
 
 [dependencies]
-limine              = "0.3"
+limine              = { git = "https://github.com/limine-bootloader/limine-rs", branch = "trunk" }
 x86_64              = "0.15"
 spin                = "0.9"
 linked_list_allocator = "0.10"
