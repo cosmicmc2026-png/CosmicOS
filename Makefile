@@ -1,7 +1,7 @@
 # CosmicOS Build System
 # Cosmic v0.0.1 Developer Beta
 
-KERNEL_ELF  := kernel/target/x86_64-cosmic/release/cosmic-kernel
+KERNEL_ELF  := kernel/target/x86_64-unknown-none/release/cosmic-kernel
 ISO_DIR     := iso_root
 ISO         := CosmicOS.iso
 LIMINE_DIR  := limine
@@ -15,10 +15,9 @@ all: iso
 # ─── Build kernel ────────────────────────────────────────────────────────────
 build:
 	cd kernel && cargo build --release \
-		--target x86_64-cosmic.json \
+		--target x86_64-unknown-none \
 		-Z build-std=core,alloc,compiler_builtins \
-		-Z build-std-features=compiler-builtins-mem \
-		-Z json-target-spec
+		-Z build-std-features=compiler-builtins-mem
 
 # ─── Fetch Limine (v7 latest stable) ─────────────────────────────────────────
 limine-fetch:
