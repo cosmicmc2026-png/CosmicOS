@@ -17,7 +17,8 @@ build:
 	cd kernel && cargo build --release \
 		--target x86_64-cosmic.json \
 		-Z build-std=core,alloc,compiler_builtins \
-		-Z build-std-features=compiler-builtins-mem
+		-Z build-std-features=compiler-builtins-mem \
+		-Z json-target-spec
 
 # ─── Fetch Limine (v7 latest stable) ─────────────────────────────────────────
 limine-fetch:
