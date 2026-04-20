@@ -6,7 +6,6 @@ use x86_64::{
         segmentation::{Segment, CS, DS, ES, SS},
         tables::load_tss,
     },
-    registers::segmentation::SegmentSelector,
     structures::{
         gdt::{Descriptor, GlobalDescriptorTable, SegmentSelector as GdtSelector},
         tss::TaskStateSegment,

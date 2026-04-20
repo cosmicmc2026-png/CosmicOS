@@ -20,7 +20,7 @@ pub fn init(memory_map: &MemoryMapResponse, hhdm_offset: u64) {
         let heap_size  = (entry.length as usize).min(32 * 1024 * 1024);
 
         unsafe {
-            allocator::HEAP.lock().init(heap_start, heap_size);
+            allocator::HEAP.lock().init(heap_start as *mut u8, heap_size);
         }
 
         return;

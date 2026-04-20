@@ -6,10 +6,7 @@ pub mod desktop;
 pub mod login;
 pub mod window;
 
-use crate::{
-    gfx::renderer::Renderer,
-    input::{keyboard, InputEvent},
-};
+use crate::input::keyboard;
 use x86_64::instructions::interrupts;
 
 // ─── Stati UI ─────────────────────────────────────────────────────────────────

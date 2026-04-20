@@ -18,7 +18,7 @@ fn panic_handler(info: &PanicInfo) -> ! {
         r.draw_string(40, 160, "Il sistema e' stato arrestato per sicurezza.", Color::rgb(0xFF, 0xCC, 0xCC), 1);
 
         // Mostra il messaggio di panico se disponibile
-        if let Some(msg) = info.message().and_then(|m| m.as_str()) {
+        if let Some(msg) = info.message().as_str() {
             r.draw_string(40, 210, "Errore:", Color::rgb(0xFF, 0xAA, 0xAA), 1);
             r.draw_string(40, 230, msg, Color::WHITE, 1);
         }

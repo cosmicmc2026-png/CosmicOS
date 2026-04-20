@@ -111,14 +111,14 @@ fn draw_menubar(r: &mut Renderer, w: usize) {
 
 // ─── Desktop icons ────────────────────────────────────────────────────────────
 
-fn draw_desktop_icons(r: &mut Renderer, w: usize, h: usize) {
+fn draw_desktop_icons(r: &mut Renderer, w: usize, _h: usize) {
     // Icona "Benvenuto.costxt" - angolo in alto a destra
     let icon_x = w.saturating_sub(80);
     let icon_y = MENUBAR_H + 20;
     draw_file_icon(r, icon_x, icon_y, "Benvenuto", ".costxt", Color::rgb(0x4A, 0x90, 0xD9));
 }
 
-fn draw_file_icon(r: &mut Renderer, x: usize, y: usize, name: &str, ext: &str, color: Color) {
+fn draw_file_icon(r: &mut Renderer, x: usize, y: usize, name: &str, _ext: &str, color: Color) {
     let iw = 48usize;
     let ih = 52usize;
 
