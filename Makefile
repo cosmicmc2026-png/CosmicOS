@@ -34,6 +34,8 @@ iso: build limine-fetch
 	mkdir -p $(ISO_DIR)/EFI/BOOT
 	cp $(KERNEL_ELF)                              $(ISO_DIR)/boot/cosmic-kernel.elf
 	cp limine.conf                                $(ISO_DIR)/boot/limine/limine.conf
+	cp limine.conf                                $(ISO_DIR)/limine.conf
+	cp limine.conf                                $(ISO_DIR)/EFI/BOOT/limine.conf
 	cp $(LIMINE_DIR)/limine-bios.sys              $(ISO_DIR)/boot/limine/
 	cp $(LIMINE_DIR)/limine-bios-cd.bin           $(ISO_DIR)/boot/limine/
 	cp $(LIMINE_DIR)/limine-uefi-cd.bin           $(ISO_DIR)/boot/limine/
