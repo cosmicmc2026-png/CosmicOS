@@ -1,4 +1,4 @@
-//! Sistema finestre CosmicOS — v0.0.1
+//! Sistema finestre CosmicOS - v0.0.1
 //! Finestre con chrome stile macOS: traffic lights, titolo, contenuto.
 
 use crate::gfx::{color::Color, renderer::Renderer};
@@ -59,11 +59,11 @@ impl Window {
         // ── Traffic lights ────────────────────────────────────────────────────
         let tly = self.y + TITLEBAR_H / 2;
 
-        // Close — rosso
+        // Close - rosso
         r.fill_circle(self.x + TL_MARGIN, tly, TL_RADIUS, Color::TL_RED);
-        // Minimize — giallo
+        // Minimize - giallo
         r.fill_circle(self.x + TL_MARGIN + TL_SPACING, tly, TL_RADIUS, Color::TL_YELLOW);
-        // Maximize — verde
+        // Maximize - verde
         r.fill_circle(self.x + TL_MARGIN + TL_SPACING * 2, tly, TL_RADIUS, Color::TL_GREEN);
 
         // ── Titolo centrato ───────────────────────────────────────────────────

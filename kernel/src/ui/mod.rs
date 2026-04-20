@@ -80,7 +80,7 @@ pub fn run() -> ! {
                 UiState::Boot => {}
             }
         } else {
-            // Nessun input — risparmio CPU con HLT
+            // Nessun input - risparmio CPU con HLT
             x86_64::instructions::hlt();
         }
     }

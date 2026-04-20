@@ -1,4 +1,4 @@
-//! CosmicOS — Cosmic v0.0.1 Developer Beta
+//! CosmicOS - Cosmic v0.0.1 Developer Beta
 //! Prestazioni spaziali
 //!
 //! Entry point del kernel. Riceve il controllo da Limine (UEFI),

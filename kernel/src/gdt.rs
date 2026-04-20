@@ -1,4 +1,4 @@
-//! Global Descriptor Table (GDT) — setup minimo per kernel x86_64.
+//! Global Descriptor Table (GDT) - setup minimo per kernel x86_64.
 
 use lazy_static::lazy_static;
 use x86_64::{

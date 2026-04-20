@@ -1,4 +1,4 @@
-//! Desktop CosmicOS — menu bar, scrivania, dock, finestre di sistema.
+//! Desktop CosmicOS - menu bar, scrivania, dock, finestre di sistema.
 
 use crate::{
     gfx::{color::Color, renderer::Renderer},
@@ -112,7 +112,7 @@ fn draw_menubar(r: &mut Renderer, w: usize) {
 // ─── Desktop icons ────────────────────────────────────────────────────────────
 
 fn draw_desktop_icons(r: &mut Renderer, w: usize, h: usize) {
-    // Icona "Benvenuto.costxt" — angolo in alto a destra
+    // Icona "Benvenuto.costxt" - angolo in alto a destra
     let icon_x = w.saturating_sub(80);
     let icon_y = MENUBAR_H + 20;
     draw_file_icon(r, icon_x, icon_y, "Benvenuto", ".costxt", Color::rgb(0x4A, 0x90, 0xD9));
@@ -159,10 +159,10 @@ fn draw_dock(r: &mut Renderer, w: usize, h: usize) {
 
     // Icone dock
     let colors = [
-        Color::rgb(0x4A, 0x90, 0xD9), // File — blu
-        Color::rgb(0x7E, 0x57, 0xC2), // Info — viola
-        Color::rgb(0x26, 0xA6, 0x9A), // Impostazioni — teal
-        Color::rgb(0x42, 0x42, 0x42), // Terminal — grigio scuro
+        Color::rgb(0x4A, 0x90, 0xD9), // File - blu
+        Color::rgb(0x7E, 0x57, 0xC2), // Info - viola
+        Color::rgb(0x26, 0xA6, 0x9A), // Impostazioni - teal
+        Color::rgb(0x42, 0x42, 0x42), // Terminal - grigio scuro
     ];
 
     let mut ix = dock_x + DOCK_PAD;
@@ -197,7 +197,7 @@ fn draw_info_window(r: &mut Renderer, w: usize, h: usize) {
         ("Versione:",    "Cosmic v0.0.1 Developer Beta"),
         ("Architettura:","x86_64"),
         ("Boot:",        "UEFI via Limine"),
-        ("Kernel:",      "Rust (no_std) — bare metal"),
+        ("Kernel:",      "Rust (no_std) - bare metal"),
         ("Grafica:",     "Framebuffer lineare software"),
         ("Memoria:",     "Heap dinamico (linked_list_allocator)"),
         ("Motto:",       "Prestazioni spaziali"),

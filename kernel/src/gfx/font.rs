@@ -1,4 +1,4 @@
-//! Font bitmap 8×8 — copertura ASCII 0x20–0x7E.
+//! Font bitmap 8×8 - copertura ASCII 0x20–0x7E.
 //! Derivato dal font IBM CP437 classico (dominio pubblico).
 //! Ogni carattere = 8 byte; bit MSB = pixel sinistro.
 

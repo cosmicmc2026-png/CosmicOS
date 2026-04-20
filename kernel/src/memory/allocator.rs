@@ -1,4 +1,4 @@
-//! Allocatore globale Rust — utilizza linked_list_allocator.
+//! Allocatore globale Rust - utilizza linked_list_allocator.
 
 use linked_list_allocator::LockedHeap;
 

@@ -1,4 +1,4 @@
-//! Virtual File System CosmicOS — v0.0.1
+//! Virtual File System CosmicOS - v0.0.1
 //!
 //! Struttura in-memory con estensioni custom .cos*.
 //! Non c'è persistenza su disco: tutto è RAM-only nella prima versione.

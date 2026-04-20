@@ -1,4 +1,4 @@
-//! Sottosistema memoria — inizializza l'heap Rust dal memory map di Limine.
+//! Sottosistema memoria - inizializza l'heap Rust dal memory map di Limine.
 
 pub mod allocator;
 

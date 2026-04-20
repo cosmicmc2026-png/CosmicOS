@@ -1,4 +1,4 @@
-//! Panic handler — schermata di errore kernel stile CosmicOS.
+//! Panic handler - schermata di errore kernel stile CosmicOS.
 
 use core::panic::PanicInfo;
 use crate::gfx::color::Color;

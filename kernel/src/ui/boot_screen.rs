@@ -1,4 +1,4 @@
-//! Schermata di avvio CosmicOS — branding, versione, motto.
+//! Schermata di avvio CosmicOS - branding, versione, motto.
 
 use crate::gfx::{color::Color, renderer::Renderer};
 
@@ -21,7 +21,7 @@ pub fn render(r: &mut Renderer) {
     // Punto interno bianco (stile "stella" / pianeta)
     r.fill_circle(logo_cx + 6, logo_y + logo_radius - 6, 6, Color::WHITE);
 
-    // ── "COSMIC" — grande, rosso ─────────────────────────────────────────────
+    // ── "COSMIC" - grande, rosso ─────────────────────────────────────────────
     let title_scale = 5usize;
     let title       = "COSMIC";
     let title_w     = Renderer::string_width(title, title_scale);
@@ -29,7 +29,7 @@ pub fn render(r: &mut Renderer) {
     let title_y     = cy.saturating_sub(60);
     r.draw_string(title_x, title_y, title, Color::COSMIC_RED, title_scale);
 
-    // ── "OS" — affiancato, scuro ─────────────────────────────────────────────
+    // ── "OS" - affiancato, scuro ─────────────────────────────────────────────
     let os_scale = 5usize;
     let os_x     = title_x + title_w + 8;
     let os_y     = title_y;
@@ -64,5 +64,5 @@ pub fn render(r: &mut Renderer) {
 
     // ── Copyright ────────────────────────────────────────────────────────────
     let copy_y = h.saturating_sub(40);
-    r.draw_string_centered(cx, copy_y, "CosmicOS — Tutti i diritti riservati", Color::COSMIC_TEXT_SEC, 1);
+    r.draw_string_centered(cx, copy_y, "CosmicOS - Tutti i diritti riservati", Color::COSMIC_TEXT_SEC, 1);
 }

@@ -1,4 +1,4 @@
-//! Driver tastiera PS/2 — Set 1 (XT) scan codes.
+//! Driver tastiera PS/2 - Set 1 (XT) scan codes.
 //! Gestisce shift, capslock; produce InputEvent tramite ring buffer.
 
 use spin::Mutex;
@@ -72,7 +72,7 @@ pub fn handle_scancode(sc: u8) {
             mods.capslock = !mods.capslock;
             return;
         }
-        0x3A => return, // Caps Lock release — ignora
+        0x3A => return, // Caps Lock release - ignora
         _ => {}
     }
 

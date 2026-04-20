@@ -115,7 +115,7 @@ extern "x86-interrupt" fn double_fault_handler(
     _stack_frame: InterruptStackFrame,
     _error_code: u64,
 ) -> ! {
-    panic!("DOUBLE FAULT — errore critico della CPU");
+    panic!("DOUBLE FAULT - errore critico della CPU");
 }
 
 // ─── Handler: Page Fault ─────────────────────────────────────────────────────
@@ -126,7 +126,7 @@ extern "x86-interrupt" fn page_fault_handler(
 ) {
     use x86_64::registers::control::Cr2;
     let addr = Cr2::read();
-    panic!("PAGE FAULT @ {:?} — codice: {:?}", addr, error_code);
+    panic!("PAGE FAULT @ {:?} - codice: {:?}", addr, error_code);
 }
 
 // ─── Handler: Keyboard IRQ1 ──────────────────────────────────────────────────
